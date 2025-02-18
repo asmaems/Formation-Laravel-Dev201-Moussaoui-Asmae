@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
 
-{{$data["title"]}}
+ <p>Show blade</p>
 
 @endsection

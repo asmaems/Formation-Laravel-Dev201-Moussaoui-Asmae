@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-$post=[
-    1=>['title'=>'Laravel'],
-    2=>['title'=>'React']
-];
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,9 +15,17 @@ Route::get('/posts/{id}/{book}',function($id, $book){
     return "$id $book";
 });
 
-Route::get('/home','HomeController@home')->name('home');
+Route::get('/show',function(){
+  $post=[
+    1=>['title'=>'Laravel'],
+    2=>['title'=>'React']
+];
+  return view('posts.show',['data'=>$post]);
+});
 
-// return view('posts.show',[data=>$post[$id]]);
+Route::get('/home','HomeController@home')->name('home');
+// Route::get('/home',[HomeController::class, 'home'] );
+
 
 
 
