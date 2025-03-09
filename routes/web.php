@@ -1,4 +1,5 @@
 <?php
+// C:\xampp\htdocs\formation
 
 use Illuminate\Support\Facades\Route;
 
